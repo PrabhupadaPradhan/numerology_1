@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 import datetime as dt
 import os
-os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+# os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 def create_download_link(val, filename):
     b64 = base64.b64encode(val)
     return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="{filename}.pdf">Download file</a>'
